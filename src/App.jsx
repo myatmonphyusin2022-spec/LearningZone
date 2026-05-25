@@ -6,6 +6,7 @@ import Courses from "./pages/Courses";
 import CourseDetail from "./pages/CourseDetail";
 import Dashboard from "./pages/Dashboard";
 import Quiz from "./pages/Quiz";
+import LoginSettings from "./pages/LoginSettings";
 
 export default function App() {
   return (
@@ -14,6 +15,8 @@ export default function App() {
         <Navbar />
         <main className="flex-1">
           <Routes>
+            <Route path="/login" element={<LoginSettings />} />
+            <Route path="/settings" element={<LoginSettings />} />
             <Route path="/" element={<Home />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/courses/:id" element={<CourseDetail />} />
